@@ -1,0 +1,69 @@
+{
+  "skill_name": "xiaohongshu-scraper",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我分析这个小红书帖子的内容，主要是评论区用户对这款护肤品的评价怎么样：https://www.xiaohongshu.com/explore/674b1234000000001a01a2b3",
+      "expected_output": "提取帖子正文、互动数据和评论区分析，重点总结用户对护肤品的评价（正面/负面/中性），输出结构化摘要报告",
+      "files": [],
+      "assertions": [
+        {
+          "name": "提取帖子正文内容",
+          "description": "成功提取并展示帖子的正文内容"
+        },
+        {
+          "name": "提取互动数据",
+          "description": "提取点赞、收藏、评论数等互动数据"
+        },
+        {
+          "name": "分析评论区情感",
+          "description": "分析评论区用户情感倾向（正面/负面/中性）"
+        },
+        {
+          "name": "输出结构化报告",
+          "description": "按照结构化格式输出摘要报告"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我发了一张小红书帖子的截图，帮我看看这个帖子说了什么，有多少点赞和收藏",
+      "expected_output": "分析截图内容，提取帖子正文和互动数据（点赞、收藏、评论数），输出基本信息摘要",
+      "files": [],
+      "assertions": [
+        {
+          "name": "识别截图需求",
+          "description": "能够识别并提示用户提供截图"
+        },
+        {
+          "name": "提取互动数据",
+          "description": "从截图中提取点赞、收藏、评论数"
+        },
+        {
+          "name": "输出摘要",
+          "description": "输出基本内容摘要"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "帮我把这几个小红书链接的内容整理一下，我要做个竞品分析报告。链接1：https://www.xiaohongshu.com/explore/674b1111000000001a01a2b1 链接2：https://www.xiaohongshu.com/explore/674b2222000000001a01a2b2",
+      "expected_output": "分别提取两个帖子的内容、互动数据和评论分析，整理成对比表格，便于竞品分析",
+      "files": [],
+      "assertions": [
+        {
+          "name": "处理多个链接",
+          "description": "能够处理用户提供多个链接的情况"
+        },
+        {
+          "name": "提取各链接内容",
+          "description": "分别提取每个链接的帖子内容"
+        },
+        {
+          "name": "生成对比表格",
+          "description": "整理成对比表格便于竞品分析"
+        }
+      ]
+    }
+  ]
+}
