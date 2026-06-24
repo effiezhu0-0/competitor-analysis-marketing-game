@@ -1,75 +1,109 @@
-# Competitor Analysis Marketing Game Skills
+# 营销游戏竞品分析 Skills
 
-This repository contains reusable Zero skills for marketing-game competitor analysis workflows.
+这个仓库用于存放可复用的 Zero Skills，主要服务于营销游戏、互动活动、社媒内容与用户评论分析等竞品研究场景。
 
-## Included Skills
+## 当前包含的 Skill
 
 ### xiaohongshu-scraper
 
-A Zero skill for keyword-driven Xiaohongshu competitor research. It supports:
+`xiaohongshu-scraper` 是一个用于小红书关键词调研和竞品分析的 Zero Skill。
 
-- Searching Xiaohongshu by keyword
-- Opening post detail pages
-- Browsing and scrolling the comment area container
-- Capturing detail-page and comment-area screenshots
-- Producing a sample confirmation draft before final reporting
-- Generating HTML/PNG competitor analysis reports with embedded evidence screenshots
+它支持：
 
-Skill path:
+- 根据关键词搜索小红书内容
+- 打开帖子详情页
+- 浏览并滚动评论区容器
+- 截取详情页和评论区证据图
+- 先输出样本确认稿，等待用户确认
+- 用户确认后生成 HTML / PNG 格式的竞品分析报告
+- 在报告中直接嵌入证据截图，方便图文对应核验
+
+Skill 文件路径：
 
 ```text
 skills/xiaohongshu-scraper/SKILL.md
 ```
 
-## Key Workflow
+## 适用场景
 
-1. Search Xiaohongshu by keyword.
-2. Sample relevant posts.
-3. Open each post detail page.
-4. Scroll inside the comment-area container, not just the full page.
-5. Save evidence screenshots:
-   - Detail page screenshot
-   - Comment area screenshot
-6. Output a sample confirmation draft first.
-7. After user confirmation, generate the final competitor analysis report.
+- 小红书竞品内容分析
+- 营销游戏/互动活动种草内容分析
+- 用户评论观点总结
+- 评论区情绪和高频诉求提炼
+- 社媒内容策略复盘
+- 活动玩法、互动机制、用户反馈对比
 
-## Report Requirements
+## 核心流程
 
-The final report should include:
+1. 输入关键词，例如“蚂蚁庄园桌面组件”。
+2. 在小红书中搜索关键词。
+3. 按要求抽样帖子。
+4. 逐条打开帖子详情页。
+5. 定位评论区容器，并在评论区内部单独滚动浏览。
+6. 保存证据截图：
+   - 详情页截图
+   - 评论区截图
+7. 先输出“图文对应确认稿”，让用户确认样本是否可用。
+8. 用户确认后，生成最终竞品分析报告。
 
-- Task overview
-- Sample overview
-- Competitor comparison
-- Key insights with embedded evidence screenshots
-- Actionable recommendations
+## 报告输出规范
 
-Important reporting rules:
+最终报告通常包含：
 
-- Evidence screenshots must be embedded directly in the HTML/PNG report.
-- Do not show only `file://` image paths in final reports.
-- A single insight can be supported by multiple related posts and screenshots.
-- Do not force a one-post-one-insight structure.
-- Use only visible page information. Do not fabricate metrics or comments.
+- 任务概览
+- 样本总览
+- 竞品对比
+- 关键结论
+- 图文证据
+- 可执行建议
 
-## Install
+重要规则：
 
-Copy the skill folder into your Zero skills directory:
+- 报告中的证据截图必须直接嵌入展示，不能只放 `file://` 图片地址。
+- 一个结论可以由多个帖子共同支撑，不强制“一条帖子对应一条结论”。
+- 结论要按内容相关性匹配证据截图。
+- 只使用页面可见信息，不编造评论、互动量或结论依据。
+- 评论分析需要说明样本范围，例如“基于页面可见评论”。
+- 若小红书要求登录，需要先在浏览器中完成登录，再继续采集。
+
+## 安装方式
+
+将 skill 文件夹复制到本地 Zero Skills 目录：
 
 ```bash
 cp -R skills/xiaohongshu-scraper "~/Library/Application Support/Relay/Electron/resources/SKILLs/"
 ```
 
-If your Zero installation uses a different skills directory, copy the folder there instead.
+如果你的 Zero 安装路径不同，请把 `xiaohongshu-scraper` 文件夹复制到对应的 Skills 目录下。
 
-## Package
+安装后，Zero 在遇到小红书、竞品分析、关键词搜索、帖子评论分析等任务时，可以使用该 Skill。
 
-A distributable ZIP can be created with:
+## 打包方式
+
+如果需要生成可分发压缩包，可以执行：
 
 ```bash
 cd skills
 zip -r xiaohongshu-scraper-skill.zip xiaohongshu-scraper -x "*/.DS_Store"
 ```
 
-## Notes
+生成的 `xiaohongshu-scraper-skill.zip` 可以发给其他用户安装。
 
-This skill is designed for research and analysis workflows. It depends on browser automation availability when interacting with Xiaohongshu pages. If login is required, complete login in the browser session before continuing collection.
+## 目录结构
+
+```text
+.
+├── README.md
+└── skills
+    └── xiaohongshu-scraper
+        ├── SKILL.md
+        └── evals
+            └── evals.json
+```
+
+## 注意事项
+
+- 该 Skill 依赖浏览器自动化能力来打开小红书页面、滚动评论区和截图。
+- 如果小红书页面出现登录弹窗，需要先完成登录。
+- 截图建议保存到稳定目录，避免放在 `/tmp` 后被系统清理。
+- 最终报告应优先使用 HTML + PNG 两种格式，方便查看和分享。
