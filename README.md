@@ -1,12 +1,6 @@
-# 营销游戏竞品分析 Skills
+# 营销互动竞品分析skill
 
-这个仓库用于存放可复用的 Zero Skills，主要服务于营销游戏、互动活动、社媒内容与用户评论分析等竞品研究场景。
-
-## 当前包含的 Skill
-
-### xiaohongshu-scraper
-
-`xiaohongshu-scraper` 是一个用于小红书关键词调研和竞品分析的 Zero Skill。
+可在Zero中使用的skill，主要用于营销互动游戏的竞品分析场景。
 
 它支持：
 
