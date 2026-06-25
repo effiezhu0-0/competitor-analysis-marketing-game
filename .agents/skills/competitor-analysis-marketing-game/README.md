@@ -46,9 +46,7 @@ Skill 通常产出：
 ## 依赖资料
 
 - `SKILL.md`：Agent 执行入口和核心流程
-- `references/rules.md`：核心规则、边界和禁止事项
-- `references/workflow.md`：分阶段执行流程
-- `references/overview.md`：背景、术语和适用范围
+- `references/rules.md`：核心规则、判断标准、边界条件和禁止事项
 - `examples/input-01.md` 与 `examples/output-01.md`：验收样例
 
 ## 边界和风险
