@@ -1,10 +1,10 @@
 ---
-name: xiaohongshu-scraper
-description: 基于关键词自动检索小红书内容，自动浏览帖子与评论区、截图取证，并在用户确认后输出结论可追溯的竞品分析报告（HTML+PNG）。触发词：小红书、xhs、竞品分析、关键词搜索、帖子评论分析。
-version: 1.3.1
+name: competitor-analysis-marketing-game
+description: 面向营销游戏、互动活动与社媒内容的竞品分析 Skill。支持基于关键词检索小红书内容，浏览帖子详情和评论区，截图取证，先输出样本确认稿，再生成结论可追溯且图文对应的 HTML/PNG 竞品分析报告。触发词：小红书、xhs、竞品分析、营销游戏、互动活动、关键词搜索、帖子评论分析。
+version: 1.4.0
 ---
 
-# 小红书竞品分析 Skill
+# 营销游戏竞品分析 Skill
 
 ## 核心能力
 
